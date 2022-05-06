@@ -33,7 +33,7 @@ jobs:
         run: docker run --name train_1 -v dataset:/data tzephons/github-action-train
 
       - name: Copy model.json from train container
-        run: docker cp train_1:data/model.json ./data
+        run: docker cp train_1:/data/model.json ./data/
 
       - name: Set outputs
         id: vars
